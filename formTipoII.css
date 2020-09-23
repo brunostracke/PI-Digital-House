@@ -1,0 +1,86 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    display: flex;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    width: 100%;
+    justify-content: center;;
+    padding: 20px 33px;
+    box-sizing: border-box;;
+}
+
+h1 {
+    color: #6C6B6B;
+    background-color: #84DCC6;
+    position: relative;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #6C6B6B;
+    padding:0px 20px;
+}
+
+input {
+    background-color: #F0EBEB;
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0 15px  0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 44px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+}
+
+.next {
+    grid-column: 5/6;
+    height:15px;
+    width: 15px;
+    align-self: center;
+    justify-self: center;
+}
+
+.previous {
+    height:15px;
+    width: 15px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (min-width:600px) {
+    .container{
+        width: 600px;
+    }
+}
