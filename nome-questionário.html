@@ -2,33 +2,34 @@
 <hmtl lang="en">
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initail-scale= 1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie-edge">
 		<title>Questionário-nome</title>
+		<link rel="stylesheet" href="nome.css"/>
 	</head>
 	<body>
-		<div class="container">
+		<form class="container">
 			<header>Questionário</header>
-			<form>
-				<div class="container2">
-					<label for="nome">Nome:</label>
-					<textarea 
-						name="nome" 
-						id="nome" 
-						rows="3" 
-						cols="40" 
-						maxlength="100" 
-						placeholder="Nome do paciente">
-					</textarea>
-					<button type="button">
-						<a href="#">
-							<img class="setanome" src="pi.seta.png"/>
-						</a>
-					</button>
-				</div>	
-			</form>
-		</div>
+			<div class="relative1">
+				<label>Nome:</label>
+			</div>
+			<div>
+				<textarea 
+				name="nome"
+				id="nome"
+				rows="3"
+				cols="40"
+				placeholder="Escreva o nome do paciente"
+				required
+				>
+				</textarea>
+			</div>
+			<div class="relative2">	
+				<button type="button">
+					<a href="#">
+						<img class="setanome" src="https://github.com/brunostracke/PI-Digital-House/blob/master/-Bjw-next-page.png?raw=true"/>
+					</a>
+				</button>
+			</div>
+		</form>
 	</body>
-</html>
-		
-		
