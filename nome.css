@@ -1,62 +1,77 @@
 			*
 				{
 					box-sizing: border-box;
+					font-family: Roboto, Arial;
 					margin: 0 0 0 0;
-					background-color: white;
+				}
+			form
+				{
+					height: 100vh;
+					padding: 3px;
+				}
+			.container
+				{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
 				}
 			header
 				{
-					width: 100vw;
-					justify-content: center;
-					font-family: roboto;
-					font-style: normal;
-					font-weight: 700;
-					font-size: 24px;
-					line-height: 28px;
-					display: flex;
 					background: #84DCC6;
+					width: 100%;
+					text-align: center;
+					font-size: 24px;
+					font-weight: 700;
 					border-radius: 5px;
 					height: 59px;
 					padding-bottom: 16px;
 					padding-top: 15px;
-					text-align: center;
 					color: #6C6B6B;
+				}
+			.relative1
+				{
+					position: relative;
+					right: 100px;
 				}
 			label
 				{
-					font-family: Roboto;
-					font-style: normal;
-					font-weight: normal;
 					font-size: 24px;
 					line-height: 89px;
+					right: 100px;
 					color: #606060;
-					margin-left: 30px;
-					
 				}
 			textarea
 				{
-					display: flex;
-					margin-left: 30px;
-					margin-right: 30px;
 					height: 172px;
 					background: #F0EBEB;
-					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-					padding-top: 15px;
-					padding-left: 5px;
 					border-radius: 5px;
+					border: none;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 				}
 			.setanome
 				{
-					
 					width: 40px;
-					height: 40px;
-
+					height: 40px;	
 				}
 			button
 				{
-					display: block;
-					position: relative;
-					top: 45px;
-					left: 220px;
 					border: 0;
+					background: white;
+				}
+			.relative2
+				{
+					position: relative;
+					left: 100px;
+					top: 30px;
+				}
+			@media (max-width: 320px)
+				{
+					textarea
+						{
+							width: 230px;
+						}
+					.relative2
+						{
+							left: 75px;
+						}
 				}
