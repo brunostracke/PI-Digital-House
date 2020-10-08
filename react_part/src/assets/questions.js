@@ -23,9 +23,6 @@ export const questions = [
     {title:'Comorbidades:',
     type:1
     },
-    {title:'Medicações:',
-    type:1
-    },
     {title:'Alergias:',
     type:1
     },

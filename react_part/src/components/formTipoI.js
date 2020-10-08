@@ -6,7 +6,6 @@ export default class FormTipoI extends Component {
         return(
             <div>
                 <form className="container">
-                    <header>Questionário</header>
                     <div className="relative1">
                        <label>{this.props.question.title}</label>
                     </div>

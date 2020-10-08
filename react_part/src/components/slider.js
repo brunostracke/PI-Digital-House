@@ -1,42 +1,23 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import "../../node_modules/slick-carousel/slick/slick.css"; 
-import "../../node_modules/slick-carousel/slick/slick-theme.css";
-
-
+import React, { Component } from 'react';
+import Carousel from 'react-elastic-carousel';
+ 
 export default class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+  state = {
+    items: [
+      {id: 1, title: 'item #1'},
+      {id: 2, title: 'item #2'},
+      {id: 3, title: 'item #3'},
+      {id: 4, title: 'item #4'},
+      {id: 5, title: 'item #5'}
+    ]
+  }
+ 
+  render () {
+    const { items } = this.state;
     return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
-    );
+      <Carousel>
+        {items.map(item => <div key={item.id}>{item.title}</div>)}
+      </Carousel>
+    )
   }
 }

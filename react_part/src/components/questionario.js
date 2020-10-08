@@ -3,10 +3,7 @@ import { questions } from  '../assets/questions.js';
 import FormTipoI from './formTipoI.js';
 import FormTipoII from './formTipoII.js';
 import FormTipoIII from './formTipoIII.js';
-
-// import "../../node_modules/slick-carousel/slick/slick.css"; 
-// import "../../node_modules/slick-carousel/slick/slick-theme.css";
-// import Slider from 'react-slick';
+import Carousel from 'react-elastic-carousel';
 
 export default class Questionario extends Component {
     constructor(props){
@@ -41,20 +38,14 @@ export default class Questionario extends Component {
     }
 
     render() {
-        //  const settings = {
-        //      className:'center',
-        //      dots: true,
-        //      infinite: true,
-        //      speed: 500,
-        //      slidesToShow: 1,
-        //      slidesToScroll: 1
-        //    };
-
         return (
             <div>
+                <header>Questionário</header>
+                <Carousel>
                     {questions.map((question) => 
                         this.renderQuestion(question)
                         )}
+                </Carousel>
             </div>
         )
     }
