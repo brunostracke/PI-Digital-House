@@ -1,16 +1,21 @@
 import React from 'react';
-//import { questions } from  './assets/questions.js';
-// import FormTipoI from './components/formTipoI.js';
-// import FormTipoII from './components/formTipoII.js';
-// import FormTipoIII from './components/formTipoIII.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Questionario from './components/questionario.js';
+import Homepage from './components/home.js';
+import Authentication from './components/authentication.js';
 
 function App() {
 
   return (
-    <div className="App">
-      <Questionario />
-    </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path='/auth' component={Authentication} />
+            <Route path='/quest' component={Questionario} />
+          </Switch>
+        </div>
+      </Router>
   );
 }
 

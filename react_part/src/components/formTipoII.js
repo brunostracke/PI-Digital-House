@@ -5,7 +5,9 @@ export default class FormTipoII extends Component {
     render() {
         return (
                 <div className="container">
-                    <h3>{this.props.question.title}</h3>
+                    <div className="relative1">
+                       <label>{this.props.question.title}</label>
+                    </div>
                     
                     {this.props.question.options.map((option) => (
                         <div key = {option}>
