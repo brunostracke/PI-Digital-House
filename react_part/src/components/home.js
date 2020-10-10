@@ -8,23 +8,23 @@ import fb from "../assets/imgs/fb-icon.jpg";
 import linkedin from "../assets/imgs/linkedin-icon.jpg";
 import skype from "../assets/imgs/skype-icon.jpg";
 import Menu from './menu.js';
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default class Homepage extends Component {
     render() {
         return (
-            <div>
-                <>
-                <Container>
-                    <Row className="top">
-                        <Col md="12">
+                
+                <container className="wrapper" >
+                    <Row>
+                        
                             <Col md="4" className="top-img">
                                 <img src={logo} alt="" />
                             </Col>
             
-                            <Col md="8" className="menu">
+                            <Col md="8" className="menuzinho">
                                 <Menu />
                             </Col>
-                        </Col>    
+                           
                     </Row>
 
                     <Row md="12" className="mid">
@@ -42,9 +42,7 @@ export default class Homepage extends Component {
                             </Col>
                         </Col>
                     </Row>
-                </Container>
-                </>
-            </div>
+                </container>
         )
     }
 }

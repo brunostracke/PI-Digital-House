@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
+import './home.css';
 
 export default class menu extends Component {
     render() {
         return (
-            <div>
-                 <div className=" col-md-8 menu">
+           
                     <nav className="navbar navbar-expand-md navbar-dark">
                 
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
@@ -21,13 +21,12 @@ export default class menu extends Component {
                               <a className="nav-link" href="#faleconosco">FALE CONOSCO</a>
                             </li>
                             <li className="nav-item entrar">
-                              <Link to='/auth'>ENTRAR</Link>
+                              <Link to='/auth' className="nav-link">ENTRAR</Link>
                             </li>
                           </ul>
                         </div>
                       </nav>    
-                </div>
-            </div>
+           
         )
     }
 }

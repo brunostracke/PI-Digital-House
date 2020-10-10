@@ -11,20 +11,23 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100% !important;
     align-items: center;
     background-color: #84DCC6;
     position: relative;
+   
+
 }
 
-.row.top{
+.row{
     border-bottom: 4px white solid;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100% !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover { 
-    color: white;
+    color: white !important;
     font-size: 94%;
 
 }
@@ -34,13 +37,17 @@ button.navbar-toggler{
     
 }
 
+.col-md-12{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 
 nav.navbar{
     display: flex;
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
     height: 100%;
     
 }
@@ -53,6 +60,11 @@ li.nav-item{
     width: 100%;
     text-align: center;
     margin: 10px; 
+}
+
+.menuzinho{
+    padding-right: 30px !important;
+ 
 }
 
 li.entrar {
@@ -73,11 +85,6 @@ img {
     position: relative;
     
 }
-
-.col-md-12{
-    padding: 0;
-}
-
 
 
 .row.bottom {
@@ -106,3 +113,11 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+.container{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+
+}
+
+
