@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './menu.css'
 import {
   Collapse,
   Navbar,
@@ -16,8 +17,8 @@ const Menu = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="dark" dark expand="md">
+    
+      <Navbar dark expand="md">
         {/* <NavbarBrand href="/">toggle-icon???</NavbarBrand> */}
         <NavbarToggler onClick={toggle} type="button" expand="md" aria-expanded="false"/>
         <Collapse isOpen={isOpen} navbar>
@@ -28,13 +29,13 @@ const Menu = (props) => {
             <NavItem>
               <NavLink href="#">FALE CONOSCO</NavLink>
             </NavItem>
-            <NavItem>              
-               <Link to='/auth'>ENTRAR</Link>
+            <NavItem className="entrar">              
+               <Link className="nav-link" to='/auth'>ENTRAR</Link>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    
   );
 }
 
