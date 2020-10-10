@@ -7,7 +7,7 @@ import doc from "../assets/imgs/doc.jpg";
 import fb from "../assets/imgs/fb-icon.jpg";
 import linkedin from "../assets/imgs/linkedin-icon.jpg";
 import skype from "../assets/imgs/skype-icon.jpg";
-import Menu from './menu0.js';
+import Menu from './menu.js';
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default class Homepage extends Component {
