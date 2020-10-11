@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import 'react-bootstrap';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import './home.css';
 import logo from "../assets/imgs/logo.jpg";
 import doc from "../assets/imgs/doc.jpg";
@@ -14,7 +14,7 @@ export default class Homepage extends Component {
     render() {
         return (
                 
-                <container className="wrapper" >
+                <div className="wrapper" >
                     <Row>
                         
                             <Col md="4" className="top-img">
@@ -42,7 +42,7 @@ export default class Homepage extends Component {
                             </Col>
                         </Col>
                     </Row>
-                </container>
+                </div>
         )
     }
 }

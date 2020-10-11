@@ -4,7 +4,7 @@ export default class Saver extends Component {
     render() {
         return (
             <div>
-                <input type="button" value="Salvar relatório" onClick={this.props.handleSave} />
+                <input type="button" value="Gerar relatório" onClick={this.props.handleSave} />
             </div>
         )
     }

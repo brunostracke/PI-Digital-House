@@ -6,7 +6,7 @@ import logo from '../assets/imgs/logo1.png';
 export default class Authentication extends Component {
     render() {
         return (
-            <div>
+            <div className='wrapper'>
                 <div className="container">
                 <img
                     src={logo}
@@ -39,8 +39,9 @@ export default class Authentication extends Component {
                         <span className="psw">Esqueceu sua <a href="www.çlskjdaf.com">senha?</a></span>
                     </label>
                     
-                    
+                    <Link to='/createAccount'>
                     <button type="button" className="createaccount">Criar conta</button>
+                    </Link>
                     </div>
 
                 </form>
