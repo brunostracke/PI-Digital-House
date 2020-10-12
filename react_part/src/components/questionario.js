@@ -3,7 +3,7 @@ import { questions } from  '../assets/questions.js';
 import FormTipoI from './formTipoI.js';
 import FormTipoII from './formTipoII.js';
 import FormTipoIII from './formTipoIII.js';
-import Report from './report.js';
+import Report from './report0.js';
 import Saver from './saver.js';
 import Carousel from 'react-elastic-carousel';
 import { Link, Prompt } from 'react-router-dom';

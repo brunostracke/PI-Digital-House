@@ -19,6 +19,7 @@ export default class Report extends Component {
     }
 
     render() {
+        console.log(this.props.data)
         return (
             <div>
                 <Prompt when={this.setAlert.value} message="Tem certeza que deseja retornar à página inicial? Todos os dados do formulário atual serão perdidos. Certifique-se de salvá-los antes de sair." />
@@ -38,21 +39,22 @@ export default class Report extends Component {
                     <table border='1' cellSpacing='0' cellPadding='2' bordercolor="666633">
                         <thead>
                             <tr colSpan="5">
-                                <td>Anamnese</td>
+                                <td>Avaliação Médica</td>
                                 <td>Data: {this.props.date.toString()}</td>
+                                <td>Horário: {this.props.date.toString()}</td>
+                                <td>Examinador: {this.props.date.toString()}</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-        <td colSpan="3">Nome:{this.props.answers[0].text}</td>
-                                <td>Idade:</td>
-                                <td>Sexo:</td>
+                                <td colSpan="2">Nome: {this.props.data[0].text}</td>
+                                <td>Idade: {this.props.data[1].text}</td>
+                                <td>Sexo: {this.props.data[2].categorical}</td>
                             </tr>
                             <tr>
-                                <td>SAMU</td>
-                                <td>SIATE</td>
-                                <td >Capacete/cinto:</td>
-                                <td colSpan="2">Vítima de:</td>
+                                <td>Como chegou ao PS? {this.props.data[3].categorical}</td>
+                                <td colSpan="2">Vítima de: {this.props.data[4].text}</td>
+                                <td>Proteção: {this.props.data[5].categorical}</td>
                             </tr>
                             <tr>
                                 <td>Via aérea:</td>

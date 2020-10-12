@@ -28,15 +28,15 @@ export const questions = [
     },
     {title:'Comorbidades:',
     type:1,
-    classe: 'Informações do paciente'
+    classe: 'AMPLA'
     },
     {title: 'Medicações prévias/recorrentes: ',
     type: 1,
-    classe: 'Informações do paciente'
+    classe: 'AMPLA'
     },
     {title:'Alergias:',
     type:1,
-    classe: 'Informações do paciente'
+    classe: 'AMPLA'
     },
     {title: 'Vias Aéreas',
     type:1,
