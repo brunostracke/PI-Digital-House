@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './menu.css'
+import './menu.css';
 import {
   Collapse,
   Navbar,

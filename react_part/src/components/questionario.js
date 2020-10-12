@@ -6,7 +6,7 @@ import FormTipoIII from './formTipoIII.js';
 import Report from './report.js';
 import Saver from './saver.js';
 import Carousel from 'react-elastic-carousel';
-import { Link } from 'react-router-dom';
+import { Link, Prompt } from 'react-router-dom';
 
 let answers = questions.map((question) => ({
     title: question.title,
@@ -28,6 +28,8 @@ export default class Questionario extends Component {
         this.renderQuestion = this.renderQuestion.bind(this);
         this.handleChangeAnswer = this.handleChangeAnswer.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.reportToQuest = this.reportToQuest.bind(this);
+        this.setNewQuest = this.setNewQuest.bind(this);
     }
 
     handleSave(event) {
@@ -68,7 +70,21 @@ export default class Questionario extends Component {
         }
     }
 
+    reportToQuest(event) {
+        this.setState({renderReport: false});
+    }
+
+    setNewQuest() {
+        this.setState({
+            datetime: '',
+            renderReport: false,
+            questions: questions,
+            answers: answers
+        });
+    }
+
     render() {
+        const alertLeaving = () => true;
 
         const form = this.state.questions.map((question) => this.renderQuestion(question));
 
@@ -81,8 +97,9 @@ export default class Questionario extends Component {
         const questionnaire = (
             <div>
                 <header>Questionário</header>
+                <Prompt when={alertLeaving.value} message="Tem certeza que deseja retornar à página inicial? Todos os dados do formulário atual serão perdidos." />
                 <Link to='./'>
-                    <button>Voltar à Página Inicial</button>
+                    <button onClick={alertLeaving}>Voltar à Página Inicial</button>
                 </Link>
                 <Carousel>
                     {form}          
@@ -92,8 +109,7 @@ export default class Questionario extends Component {
 
         const report = (
             <div>
-                {console.log(this.state.datetime)}
-                <Report data={this.state.answers} date={this.state.datetime} />
+                <Report data={this.state.answers} date={this.state.datetime} reportToQuest={this.reportToQuest} newQuest={this.setNewQuest} />
             </div>
         );
 

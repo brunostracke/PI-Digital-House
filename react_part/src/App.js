@@ -6,7 +6,6 @@ import Authentication from './components/authentication.js';
 import CreateAccount from './components/createAccount.js';
 
 function App() {
-
   return (      
       <Router>
         <div>

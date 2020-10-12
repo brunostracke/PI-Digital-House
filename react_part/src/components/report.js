@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Prompt } from 'react-router-dom';
 
 export default class Report extends Component {
+    constructor(props) {
+        super(props);
+        this.setAlert = this.setAlert.bind(this);
+        this.newQuest = this.newQuest.bind(this);
+    }
+
+    setAlert() {
+        return true;
+    }
+
+    newQuest() {
+        const message = "Tem certeza que deseja sair da página atual? Todos os dados do formulário atual serão perdidos. Certifique-se de salvá-los antes de sair.";
+        const newQuestAlert = window.confirm(message) ? this.props.newQuest() : null;
+        return newQuestAlert;                        
+    }
+
     render() {
         return (
             <div>
+                <Prompt when={this.setAlert.value} message="Tem certeza que deseja retornar à página inicial? Todos os dados do formulário atual serão perdidos. Certifique-se de salvá-los antes de sair." />
                 <header>
                     <Link to='./'>
-                        <button>Voltar à Página Inicial</button>
+                        <button onClick={this.setAlert}>Voltar à Página Inicial</button>
                     </Link>                    
                 </header>
 
                 <div>
-                    <button>Voltar ao relatório</button>
-                    <button>Iniciar novo relatório</button>
+                    <button onClick={this.props.reportToQuest}>Voltar ao relatório</button>
+                    <button onClick={this.newQuest}>Iniciar novo relatório</button>
                     <button>Enviar Relatório por e-mail</button>
                 </div>
 
@@ -25,12 +42,9 @@ export default class Report extends Component {
                                 <td>Data: {this.props.date.toString()}</td>
                             </tr>
                         </thead>
-                        {/* <tr>
-                            <td colSpan="3">Data: {this.props.date}</td>
-                        </tr> */}
                         <tbody>
                             <tr>
-                                <td colSpan="3">Nome:</td>
+        <td colSpan="3">Nome:{this.props.answers[0].text}</td>
                                 <td>Idade:</td>
                                 <td>Sexo:</td>
                             </tr>
