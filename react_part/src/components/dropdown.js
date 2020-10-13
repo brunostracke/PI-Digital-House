@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import './dropdown.css'
 
 
@@ -8,24 +8,24 @@ const Dropzao = (props) => {
 
     const toggle = () => setDropdownOpen(!dropdownOpen);
 
+    const sendTitle = (titulo) => props.getTitle(titulo);
 
-
-    {
+    
         return (
             <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle nav caret>
-                    {this.props.grupo}
+                    {props.grupo}
                 </DropdownToggle>
                 <DropdownMenu >
-                    {this.props.titulos.map( (titulo) => 
+                    {props.titulos.map( (titulo) => 
                         <div>
-                            <DropdownItem>{titulo}</DropdownItem>
+                            <DropdownItem key={titulo} onClick={sendTitle(titulo)}>{titulo}</DropdownItem>
                         </div>
                     )};
                 </DropdownMenu>
             </Dropdown>
         )
-    }
+    
 }
 
 export default Dropzao;

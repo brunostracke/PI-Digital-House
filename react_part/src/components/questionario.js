@@ -5,8 +5,11 @@ import FormTipoII from './formTipoII.js';
 import FormTipoIII from './formTipoIII.js';
 import Report from './report.js';
 import Saver from './saver.js';
+import MenuQuestions from './menuquestions.js';
 import Carousel from 'react-elastic-carousel';
 import { Link, Prompt } from 'react-router-dom';
+import { PDFExport } from '@progress/kendo-react-pdf';
+import './questionario.css';
 
 let answers = questions.map((question) => ({
     title: question.title,
@@ -34,6 +37,8 @@ export default class Questionario extends Component {
         this.newQuest = this.newQuest.bind(this);
         this.setNewQuest = this.setNewQuest.bind(this);
         this.setAlert = this.setAlert.bind(this);
+        this.goto = this.goto.bind(this);
+        this.carousel = React.createRef();
     }
 
     handleSave(event) {
@@ -95,6 +100,15 @@ export default class Questionario extends Component {
             questions: questions,
             answers: answers
         });
+    };
+
+    exportPDFWithComponent = () => {
+        this.pdfExportComponent.save();
+    }
+
+    goto(index) {
+    //   this.carousel.goTo(Number(index));
+        // console.log(index);
     }
 
     render() {
@@ -108,36 +122,33 @@ export default class Questionario extends Component {
 
         const questionnaire = (
             <div>
-                <header>Questionário</header>
-                <Link to='./'>
-                    <button onClick={this.setAlert}>Voltar à Página Inicial</button>
-                </Link>
-                <Carousel>
+                <header>Questionário</header>                
+                <MenuQuestions sendTitleIndex={this.goto} />
+                <Carousel ref={this.carousel} >
                     {form}          
-                </Carousel>
+                </Carousel>                
             </div>
         );
 
         const report = (
             <div>
-                <header>
+                <header>Relatório</header>
                     <Link to='./'>
                         <button onClick={this.setAlert}>Voltar à Página Inicial</button>
-                    </Link>                    
-                </header>
+                    </Link> 
 
-                <div>
-                    <button onClick={this.reportToQuest}>Voltar ao relatório</button>
-                </div>
-
+                <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4">
                 <Report data={this.state.answers} date={this.state.datetime}  />
+                </PDFExport>
 
                 <div>
                     <button onClick={this.newQuest}>Iniciar novo relatório</button>
-                    <button>Salvar relatório como PDF</button>
+                    <button onClick={this.exportPDFWithComponent}>Salvar relatório como PDF</button>
                 </div>
             </div>
         );
+
+        
 
         const toRender = this.state.renderReport ? report : questionnaire;
     

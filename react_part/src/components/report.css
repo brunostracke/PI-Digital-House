@@ -3,7 +3,8 @@ h6 {
     color: #FFF;
     font-weight: bold;
     margin:0px;
-    padding:3px;
+    padding:5px;
+    border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 

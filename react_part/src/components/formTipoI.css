@@ -5,40 +5,17 @@
 					margin: 0 0 0 0;
 				}
 			form
-				{
-					height: 100vh;
-					width: 100%;
-					padding: 3px;
-				}
-			.container
-				{
-					display: flex;
+				{	display: flex;
 					flex-direction: column;
 					align-items: center;
-				}
-			header
-				{
-					background: #84DCC6;
+					height: 50vh;
 					width: 100%;
-					text-align: center;
-					font-size: 24px;
-					font-weight: 700;
-					border-radius: 5px;
-					height: 59px;
-					padding-bottom: 16px;
-					padding-top: 15px;
-					color: #6C6B6B;
+					padding: 15px;
 				}
-			.relative1
-				{
-					position: relative;
-					right: 100px;
-				}
-			label
+			h5
 				{
 					font-size: 24px;
 					line-height: 89px;
-					right: 100px;
 					color: #606060;
 				}
 			textarea
@@ -49,30 +26,10 @@
 					border: none;
 					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 				}
-			.setanome
-				{
-					width: 40px;
-					height: 40px;	
-				}
-			button
-				{
-					border: 0;
-					background: white;
-				}
-			.relative2
-				{
-					position: relative;
-					left: 100px;
-					top: 30px;
-				}
-			@media (max-width: 320px)
+			@media (max-width: 380px)
 				{
 					textarea
 						{
 							width: 230px;
-						}
-					.relative2
-						{
-							left: 75px;
 						}
 				}

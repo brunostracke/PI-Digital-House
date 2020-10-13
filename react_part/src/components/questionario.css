@@ -1,0 +1,36 @@
+			header
+				{
+					background: #84DCC6;
+					width: 100%;
+					text-align: center;
+					font-size: 24px;
+					font-weight: 700;
+					border-radius: 5px;
+					height: 59px;
+					padding-bottom: 16px;
+					padding-top: 15px;
+					color: #6C6B6B;
+				}
+
+.chowzb:hover:enabled, .chowzb:focus:enabled, .brcpxa {
+    background-color: #84DCC6 !important;
+}
+
+#root > div > div > div > div > div.sc-eCApGN.cfKeGQ.rec.rec-carousel > button.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-right, #root > div > div > div > div > div.sc-eCApGN.cfKeGQ.rec.rec-carousel > button.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-left {
+    border-radius: 30%;
+    line-height: 25px;
+    color: #333;
+}
+
+#root > div > div > div > div > div.sc-eCApGN.cfKeGQ.rec.rec-carousel > button.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-left {
+    margin-left:15px;
+}
+
+#root > div > div > div > div > div.sc-eCApGN.cfKeGQ.rec.rec-carousel > button.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-right {
+    margin-right:15px;
+}
+
+#root > div > div > div > div > div.sc-iCoHVE.kRlYRh.rec.rec-pagination > button {
+    border-radius: 30%;
+    box-shadow: 0 0 2px 3px rgba(0,0,0,0.5)
+}

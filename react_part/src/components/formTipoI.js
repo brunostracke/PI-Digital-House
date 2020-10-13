@@ -21,11 +21,10 @@ export default class FormTipoI extends Component {
         return(
             <div>
                 <form className="container">
-                    <div className="relative1">
-                       <label>{this.props.question.title}</label>
-                    </div>
-                    <div>
-                        <textarea 
+
+                    <h5>{this.props.question.title}</h5>
+
+                    <textarea 
                         value= {this.state.text}
                         onChange = {this.handleChange}
                         rows="3"
@@ -33,8 +32,8 @@ export default class FormTipoI extends Component {
                         placeholder={this.props.question.placeholder}
                         required
                         >
-                        </textarea>
-                    </div>
+                    </textarea>
+
 		        </form>
             </div>
         )

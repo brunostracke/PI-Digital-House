@@ -8,8 +8,12 @@
     color: white !important;
     font-size: 80% !important;
     font-weight: 100;
-    
+}
 
+.entrar.nav-item {
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .button.navbar-toggler{
