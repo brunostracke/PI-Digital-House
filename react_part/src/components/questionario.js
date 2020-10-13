@@ -3,7 +3,7 @@ import { questions } from  '../assets/questions.js';
 import FormTipoI from './formTipoI.js';
 import FormTipoII from './formTipoII.js';
 import FormTipoIII from './formTipoIII.js';
-import Report from './report0.js';
+import Report from './report.js';
 import Saver from './saver.js';
 import Carousel from 'react-elastic-carousel';
 import { Link, Prompt } from 'react-router-dom';
@@ -11,7 +11,9 @@ import { Link, Prompt } from 'react-router-dom';
 let answers = questions.map((question) => ({
     title: question.title,
     categorical: '',
-    text: ''
+    text: '',
+    classe: question.classe,
+    type: question.type
 }))
 
 export default class Questionario extends Component {
@@ -29,7 +31,9 @@ export default class Questionario extends Component {
         this.handleChangeAnswer = this.handleChangeAnswer.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.reportToQuest = this.reportToQuest.bind(this);
+        this.newQuest = this.newQuest.bind(this);
         this.setNewQuest = this.setNewQuest.bind(this);
+        this.setAlert = this.setAlert.bind(this);
     }
 
     handleSave(event) {
@@ -70,8 +74,18 @@ export default class Questionario extends Component {
         }
     }
 
+    setAlert() {
+        return true;
+    }
+
     reportToQuest(event) {
         this.setState({renderReport: false});
+    }
+
+    newQuest() {
+        const message = "Tem certeza que deseja sair da página atual? Todos os dados do formulário atual serão perdidos. Certifique-se de salvá-los antes de sair.";
+        const newQuestAlert = window.confirm(message) ? this.setNewQuest() : null;
+        return newQuestAlert;                        
     }
 
     setNewQuest() {
@@ -84,8 +98,6 @@ export default class Questionario extends Component {
     }
 
     render() {
-        const alertLeaving = () => true;
-
         const form = this.state.questions.map((question) => this.renderQuestion(question));
 
         form.push(
@@ -97,9 +109,8 @@ export default class Questionario extends Component {
         const questionnaire = (
             <div>
                 <header>Questionário</header>
-                <Prompt when={alertLeaving.value} message="Tem certeza que deseja retornar à página inicial? Todos os dados do formulário atual serão perdidos." />
                 <Link to='./'>
-                    <button onClick={alertLeaving}>Voltar à Página Inicial</button>
+                    <button onClick={this.setAlert}>Voltar à Página Inicial</button>
                 </Link>
                 <Carousel>
                     {form}          
@@ -109,7 +120,22 @@ export default class Questionario extends Component {
 
         const report = (
             <div>
-                <Report data={this.state.answers} date={this.state.datetime} reportToQuest={this.reportToQuest} newQuest={this.setNewQuest} />
+                <header>
+                    <Link to='./'>
+                        <button onClick={this.setAlert}>Voltar à Página Inicial</button>
+                    </Link>                    
+                </header>
+
+                <div>
+                    <button onClick={this.reportToQuest}>Voltar ao relatório</button>
+                </div>
+
+                <Report data={this.state.answers} date={this.state.datetime}  />
+
+                <div>
+                    <button onClick={this.newQuest}>Iniciar novo relatório</button>
+                    <button>Salvar relatório como PDF</button>
+                </div>
             </div>
         );
 
@@ -117,6 +143,7 @@ export default class Questionario extends Component {
     
         return (
             <div>
+                <Prompt when={this.setAlert.value} message="Tem certeza que deseja retornar à página inicial? Todos os dados do formulário atual serão perdidos." />
                 {toRender}
             </div>
         )

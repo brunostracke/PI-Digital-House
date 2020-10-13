@@ -1,30 +1,30 @@
 export const questions = [
     {title:'Nome do paciente',
     type:1,
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title:'Idade do paciente',
     type:1,
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title: 'Sexo do paciente',
     type:2,
     options: ['Feminino', 'Masculino', 'Outro'],
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title:'Como chegou ao PS?',
     type:2,
     options: ['Samu','Siate','Procura direta'],
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title:'Vítima de',
     type:1,
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title:'Proteção',
     type:2,
     options: ['capacete','cinto','nenhuma'],
-    classe: 'Informações do paciente'
+    classe: 'Info.do paciente'
     },
     {title:'Comorbidades:',
     type:1,
@@ -171,7 +171,7 @@ export const questions = [
     },
     {title:'Convulsões:',
     type:3,
-    options: ['não','sim'],
+    options: ['Sim','Não'],
     placeholder: 'Se sim, quantos episódios?',
     classe: 'D'
     },
@@ -183,9 +183,36 @@ export const questions = [
     type:1,
     classe: 'Conduta'
     },
+    {title:'Sutura:',
+    type:3,
+    options: ['Sim','Não'],
+    placeholder: 'Se sim, qual o local?',
+    classe: 'Conduta'
+    },
+    {title:'Gesso:',
+    type:3,
+    options: ['Sim','Não'],
+    placeholder: 'Se sim, qual o tipo do gesso e o local?',
+    classe: 'Conduta'
+    },
+    {title: 'Raio-X',
+    type: 2,
+    options: ['Sim','Não'],
+    classe: 'Exames'
+    },
+    {title: 'Tomografia',
+    type: 2,
+    options: ['Sim','Não'],
+    classe: 'Exames'
+    },
+    {title: 'FAST',
+    type: 2,
+    options: ['Sim','Não'],
+    classe: 'Exames'
+    },
     {title:'Exames complementares:',
     type:1,
-    classe: 'Conduta'
+    classe: 'Exames'
     },
     {title:'Observações:',
     type:1,
