@@ -7,17 +7,13 @@ export default class Authentication extends Component {
     render() {
         return (
             <div className='wrapper'>
-                <div className="container">
                 <img
                     src={logo}
                     alt="Avatar"
                     className="avatar"
                 />
-                </div>
 
                 <form>
-                    <div className="container">
-                        
                         <input
                             type="text"
                             placeholder="Nome de Usuário"
@@ -33,16 +29,16 @@ export default class Authentication extends Component {
                         />
                     
                     <Link to="/quest">
-                    <button type="submit">Entrar</button>
+                        <button type="submit">Entrar</button>
                     </Link>
-                    <label>
-                        <span className="psw">Esqueceu sua <a href="www.çlskjdaf.com">senha?</a></span>
-                    </label>
                     
                     <Link to='/createAccount'>
-                    <button type="button" className="createaccount">Criar conta</button>
+                        <button type="button" className="createaccount">Criar conta</button>
                     </Link>
-                    </div>
+
+                    
+                    <span className="psw">Esqueceu sua <a href="www.çlskjdaf.com">senha?</a></span>
+                    
 
                 </form>
                 
