@@ -5,65 +5,72 @@ import './createaccount.css'
 export default class CreateAccount extends Component {
     render() {
         return (
-            <div>
+            <div className="outterwrapper">
+                
+                <div className="innerwrapper">
                 <header>
-                    <p>Create Account</p>
+                    Criar Conta
                 </header>
-                <div className="container">
-                    <label for="name">Name:</label>
+                    <label  className="createAccount" for="name">Nome:</label>
                     <input 
+                        className = 'auth'
                         type="text"
                         placeholder="Name"
                         name="name"
                         id="name"
                         required />
                     
-                    <label for="email">E-mail:</label>
+                    <label  className="createAccount" for="email">E-mail:</label>
                     <input 
+                        className = 'auth'
                         type="email"
                         placeholder="email@email.com"
                         name="email"
                         id="email"
                         required/>
 
-                    <label for="uname">Username:</label>    
+                    <label  className="createAccount" for="uname">Nome de Usuário:</label>    
                     <input
+                        className = 'auth'
                     type="text"
-                    placeholder="Username"
+                    placeholder="Nome de Usuário"
                     name="uname"
                     id="uname"
                     required
                     />
 
-                    <label for="psw">Password:</label>
+                    <label  className="createAccount" for="psw">Senha:</label>
                     <input
+                        className = 'auth'
                     type="password"
-                    placeholder="Password"
+                    placeholder="Senha"
                     name="psw"
                     id="psw"
                     required
                     />
 
-                    <label for="pswconfirm">Confirm password:</label>
+                    <label  className="createAccount"for="pswconfirm">Confirme a senha:</label>
                     <input
+                        className = 'auth'
                     type="password"
-                    placeholder="Password"
+                    placeholder="Senha"
                     name="pswconfirm"
                     id="pswconfirm"
                     required
                     />
 
-                    <div className="termsagree" align="center">
+                    <div className="termsagree">
                     <input
+                        className = 'termsagree'
                         type="checkbox"
                         name="termsagree"
                         id="termsagree"
                         required
                     />
-                    <label className="termsagree" for="termsagree">I have read and accept the <a href="a">Privacy Terms</a>.</label>
+                    <label  className="createAccount termsagree" for="termsagree">Eu li e aceito os <a href="a">Termos e Condições</a>.</label>
                     </div>
                     <Link to='/auth'>
-                    <button type="submit">Create my account</button>
+                    <button className="auth" type="submit">Criar Conta</button>
                     </Link>
                 
                 </div>                

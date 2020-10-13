@@ -27,17 +27,18 @@ export default class FormTipoIII extends Component {
 
     render() {
         return (
-                <div className="container">
+                <div className="container formTipoIII">
 
                    <h5>{this.props.question.title}</h5>
                     
                     {this.props.question.options.map((option) => (
-                        <div key = {option}>
-                            <input type="button" value = {option} onClick={this.handleAnswer} />    
+                        <div key = {option} className="formTipoIII">
+                            <input className='formTipoIII' type="button" value = {option} onClick={this.handleAnswer} />    
                         </div>
                     ))}
 
                     <textarea 
+                        className="formTipoIII"
                         value= {this.state.text}
                         onChange = {this.handleChange}
                         rows="3"

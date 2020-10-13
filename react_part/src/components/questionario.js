@@ -131,19 +131,19 @@ export default class Questionario extends Component {
         );
 
         const report = (
-            <div>
+            <div className="report">
                 <header>Relatório</header>
-                    <Link to='./'>
-                        <button onClick={this.setAlert}>Voltar à Página Inicial</button>
-                    </Link> 
+                <Link to='./'>
+                    <button className="report" onClick={this.setAlert}>Voltar à Página Inicial</button>
+                </Link> 
 
                 <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4">
                 <Report data={this.state.answers} date={this.state.datetime}  />
                 </PDFExport>
 
-                <div>
-                    <button onClick={this.newQuest}>Iniciar novo relatório</button>
-                    <button onClick={this.exportPDFWithComponent}>Salvar relatório como PDF</button>
+                <div className="report inner">
+                    <button className="report" onClick={this.newQuest}>Iniciar novo relatório</button>
+                    <button className="report" onClick={this.exportPDFWithComponent}>Salvar relatório como PDF</button>
                 </div>
             </div>
         );

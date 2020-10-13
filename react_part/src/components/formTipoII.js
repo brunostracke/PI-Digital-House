@@ -27,8 +27,8 @@ export default class FormTipoII extends Component {
                     
                     
                     {this.props.question.options.map((option) => (
-                        <div key = {option}>
-                            <input type="button" value = {option} onClick={this.handleAnswer} />    
+                        <div className="formTipoII" key = {option}>
+                            <input className="formTipoII" type="button" value = {option} onClick={this.handleAnswer} />    
                         </div>
                     ))}
                 </div>    
