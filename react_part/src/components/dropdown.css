@@ -1,0 +1,19 @@
+.dropdown-item{
+    border-radius: 20px !important;
+    background-color: #559c8b !important;
+    border-color: white !important;
+    border: 2px !important;
+    width: 100% !important;
+    text-align: center !important;
+    color: white  !important;
+    font: Arial  !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.dropdown-menu{
+    background-color: transparent  !important;
+    border: 0px  !important;
+
+}
