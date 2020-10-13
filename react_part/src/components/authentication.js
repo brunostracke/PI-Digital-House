@@ -6,15 +6,16 @@ import logo from '../assets/imgs/logo1.png';
 export default class Authentication extends Component {
     render() {
         return (
-            <div className='wrapper'>
+            <div className='wrapper auth'>
                 <img
                     src={logo}
                     alt="Avatar"
-                    className="avatar"
+                    className="auth"
                 />
 
-                <form>
+                <form className="auth">
                         <input
+                            className="auth"
                             type="text"
                             placeholder="Nome de Usuário"
                             name="uname"
@@ -22,6 +23,7 @@ export default class Authentication extends Component {
                         />
 
                         <input
+                        className="auth"
                         type="password"
                         placeholder="Senha"
                         name="psw"
@@ -29,11 +31,11 @@ export default class Authentication extends Component {
                         />
                     
                     <Link to="/quest">
-                        <button type="submit">Entrar</button>
+                        <button className="auth" type="submit">Entrar</button>
                     </Link>
                     
                     <Link to='/createAccount'>
-                        <button type="button" className="createaccount">Criar conta</button>
+                        <button type="button" className="auth createaccount">Criar conta</button>
                     </Link>
 
                     

@@ -2,7 +2,7 @@
 ;
 } */
 
-.wrapper {
+.wrapper.auth {
   background-color: aliceblue;
   width: 70vh;
   height: 100 vh;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-form {
+form.auth {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ form {
   border: 0px !important;
 }
 
-input {
+input.auth {
   background-color: #cccccc;
   border-radius: 20px;
   width: 300px;
@@ -37,7 +37,7 @@ input {
 }
 
 /* Set a style for all buttons */
-button {
+button.auth {
   background-color: #808080;
   color: white;
   padding: 14px 20px;
@@ -55,7 +55,7 @@ button:hover {
 
 
 /* Avatar image */
-img {
+img.auth {
   width: 500px;
 }
 
@@ -63,11 +63,11 @@ img {
 
 /* Add responsiveness */
 @media (max-width: 500px) {
-  .wrapper, form, img {
+  .wrapper.auth, form.auth, img.auth {
     width:100%;
   }
 
-  input {
+  input.auth {
     width: 200px !important;
   }
 }
