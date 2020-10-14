@@ -8,7 +8,7 @@ body {
     height: 100%;
 }
 
-.wrapper {
+.wrapper.home {
     display: flex;
     flex-direction: column;
     width: 100% !important;

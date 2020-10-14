@@ -24,10 +24,10 @@ const Menu = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="#">QUEM SOMOS</NavLink>
+              <NavLink href="#quemSomos">QUEM SOMOS</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">FALE CONOSCO</NavLink>
+              <NavLink href="#faleConosco">FALE CONOSCO</NavLink>
             </NavItem>
             <NavItem className="entrar">              
                <Link className="nav-link" to='/auth'>ENTRAR</Link>

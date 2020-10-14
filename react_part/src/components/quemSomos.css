@@ -1,0 +1,52 @@
+div.quemSomos {
+    background-color: #E5E5E5;
+    color: #3D3C3C;
+    border-radius: 30px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . header img"
+    "p p p img"
+    ". . . img";
+}
+
+h3.quemSomos {
+    grid-area: header;
+    font-size: 26;
+    text-align: right;
+}
+
+p.quemSomos {
+    grid-area: p;
+}
+
+img.quemSomos {
+    grid-area: img;
+}
+
+@media (max-width: 700px){
+    div.quemSomos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header img"
+        "p img"
+        "p img";
+    }
+    
+    h3.quemSomos {
+        grid-area: header;
+    }
+    
+    p.quemSomos {
+        grid-area: p;
+    }
+    
+    img.quemSomos {
+        grid-area: img;
+    }
+}

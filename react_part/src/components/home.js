@@ -8,13 +8,13 @@ import fb from "../assets/imgs/fb-icon.jpg";
 import linkedin from "../assets/imgs/linkedin-icon.jpg";
 import skype from "../assets/imgs/skype-icon.jpg";
 import Menu from './menu.js';
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import QuemSomos from './quemSomos.js';
 
 export default class Homepage extends Component {
     render() {
         return (
-                <div className="wrapper" >
-                    <div className="wrapper" >
+                <div className="wrapper home" >
                         <Row>
 
                             <Col md="4" className="top-img">
@@ -33,15 +33,18 @@ export default class Homepage extends Component {
                             </Col>
                         </Row>
 
-                        <Row className="bottom ">
+                        {/* <Row> */}
+                            <QuemSomos />
+                        {/* </Row> */}
+
+                        <Row id="faleConosco" className="bottom ">
                             <Col md="auto"  className="redes">
                                 <a href="https://www.facebook.com/"><img src={fb} alt="" /></a>
                                 <a href="https://www.linkedin.com/"><img src={linkedin} alt="" /></a>
                                 <a href="https://www.skype.com/"><img src={skype} alt="" /></a>
                             </Col>
                         </Row>
-                    </div>
-        </div>
+                </div>
         )
     }
 }
