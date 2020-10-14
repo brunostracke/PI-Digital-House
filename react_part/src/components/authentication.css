@@ -1,8 +1,6 @@
-/* html body {
-;
-} */
 
 .wrapper.auth {
+  margin: auto;
   background-color: aliceblue;
   width: 70vh;
   height: 100 vh;

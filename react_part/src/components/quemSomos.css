@@ -1,9 +1,10 @@
 div.quemSomos {
-    background-color: #E5E5E5;
-    color: #3D3C3C;
+    background-color: white;
     border-radius: 30px;
     width: 700px;
     display: grid;
+    margin-bottom: 80px;
+    margin-top: 15px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -15,15 +16,27 @@ div.quemSomos {
 h3.quemSomos {
     grid-area: header;
     font-size: 26;
+    color: #3D3C3C;
     text-align: right;
+    justify-self: center;
+    align-self: center;
 }
 
 p.quemSomos {
     grid-area: p;
+    color: #3D3C3C;
+    text-align: right;
+    justify-self: center;
+    align-self: center;
 }
 
 img.quemSomos {
     grid-area: img;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+
+
 }
 
 @media (max-width: 700px){
