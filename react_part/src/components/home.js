@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import './home.css';
 import logo from "../assets/imgs/logo.jpg";
-import doc from "../assets/imgs/doc.jpg";
+import doc from "../assets/imgs/bg_tipo3.jpg";
 import fb from "../assets/imgs/fb-icon.jpg";
 import linkedin from "../assets/imgs/linkedin-icon.jpg";
 import skype from "../assets/imgs/skype-icon.jpg";
